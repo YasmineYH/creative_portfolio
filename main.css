@@ -138,6 +138,7 @@ body {
 
 @media screen and (max-width: 770px) {
      body {
+        height: 98vh;
         padding: 0vh 0vw;
         flex-direction: column;
         justify-content: center;
@@ -148,7 +149,7 @@ body {
     .profile-ctn {
         transform: scale(0.5);
         width: 540px;
-        height: 400px;
+        height: 450px;
         margin: 0;
         margin-top: -150px;
     }
