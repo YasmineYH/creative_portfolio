@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Ultra&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #494949;
+    /* font-family: "Ultra", serif;
+    font-style: normal;
+    letter-spacing: 6%; */
+
+    font-family: "Saira Stencil", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    display: flex;
+    align-items: center;
+    /* gap: 75px; */
+
+    width: 97vw;
+    height: 100vh;
+    margin: auto;
+
+    padding: 0 9vw;
+
+    /* border: 3px solid red; */
+}
+
+.profile-ctn {
+    width: 540px;
+    margin-top: 45px;
+}
+
+.profile-ctn .profile-pic {
+    position: relative;
+}
+
+.profile-ctn .profile-pic .pic {
+    width: 435px;
+    height: 435px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-image: url("./assets/profile3.png");
+    background-position: 0%;
+    background-size: contain;
+}
+
+.profile-ctn .profile-pic a {
+    text-decoration: none;
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+
+.profile-ctn .profile-pic a:hover {
+    transform: scale(1.02) translateY(-2px);
+}
+
+.profile-ctn .profile-pic a:nth-of-type(3) {
+    top: 70px;
+    left: -25px;
+}
+
+.profile-ctn .profile-pic a:nth-of-type(2) {
+    top: 0px;
+    left: 35px;
+}
+
+.profile-ctn .profile-pic a:nth-of-type(1) {
+    top: -45px;
+    left: 120px;
+}
+
+.profile-ctn h1 {
+    width: 550px;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    cursor: default;
+}
+
+.profile-ctn p {
+    width: 500px;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 30px;
+    cursor: default;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+@media screen and (max-width: 1450px) {
+    body {
+        padding: 0 5vw;
+    }
+
+    .profile-ctn {
+        transform: scale(0.8);
+    }
+
+    .buttons-ctn {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    body {
+        padding: 0 0vw;
+    }
+
+    .profile-ctn {
+        transform: scale(0.6);
+        width: 340px;
+    }
+
+    .buttons-ctn {
+        transform: scale(0.6) translateX(70px);
+    }
+}
+
+@media screen and (max-width: 930px) {
+     body {
+        padding: 0 3vw;
+    }
+
+    .profile-ctn {
+        transform: scale(0.5);
+        width: 140px;
+    }
+
+    .buttons-ctn {
+        transform: scale(0.5) translateX(170px);
+    }
+}
+
+@media screen and (max-width: 770px) {
+     body {
+        padding: 0vh 0vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .profile-ctn {
+        transform: scale(0.5);
+        width: 540px;
+        height: 400px;
+        margin: 0;
+        margin-top: -150px;
+    }
+
+    .profile-ctn .profile-pic .pic {
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+    .profile-ctn h1, .profile-ctn p {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .buttons-ctn {
+        transform: scale(0.5) translateX(0px);
+        margin: 0 !important;
+        width: 555px !important;
+    }
+}
+
+
+
+
+
+
+.buttons-ctn {
+    margin-left: auto;
+    /* width: 740px; */
+}
+
+.buttons-ctn .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: end;
+}
+
+.buttons-ctn .buttons .buttons1, .buttons-ctn .buttons .buttons2 {
+    display: flex;
+    gap: 35px;
+    justify-content: end;
+}
+
+.buttons-ctn .buttons a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 20px 60px;
+    width: fit-content;
+    text-align: center;
+    box-shadow: 0px 4px 10px #00000039;
+    background-image: url("./assets/btn-bg-gray.png");
+    background-position: 0%;
+    background-size: cover;
+    transition: all 0.3s ease-in;
+}
+
+.buttons-ctn .buttons a:hover {
+    transform: scale(1.02) translateY(-2px);
+}
+
+.buttons-ctn .buttons .buttons1 a:nth-of-type(1) {
+    background-image: url("./assets/btn-bg-gray.png");
+}
+.buttons-ctn .buttons .buttons1 a:nth-of-type(2) {
+    background-image: url("./assets/btn-bg-beige.png");
+}
+.buttons-ctn .buttons .buttons2 a:nth-of-type(1) {
+    background-image: url("./assets/btn-bg-orange.png");
+}
+.buttons-ctn .buttons .buttons2 a:nth-of-type(2) {
+    background-image: url("./assets/btn-bg-wine.png");
+}
+
+.buttons-ctn p {
+    margin-top: 70px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 15px;
+    cursor: default;
+}
