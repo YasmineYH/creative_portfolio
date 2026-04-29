@@ -43,30 +43,29 @@ body {
     height: 435px;
     border-radius: 50%;
     object-fit: cover;
-    background-image: url("./assets/profile1.png");
+    background-image: url("./assets/profile3.png");
     background-position: 0%;
     background-size: contain;
     transition: all 1s ease-in;
-    animation: img-swap 3s 1s ease-out alternate-reverse;
-    animation: img-swap2 1s ease-out alternate-reverse;
-    animation-deay: 3s;
+    animation: img-swap 1s ease-out 5s alternate forwards, img-swap2 1s ease-in 10s alternate forwards, img-swap3 1s ease-out 15s alternate forwards;
+    animation-composition: accumulate;
 }
 
 @keyframes img-swap {
-    0% {
-        background-image: url("./assets/profile1.png");
-    }
     100% {
         background-image: url("./assets/profile2.png");
     }
 }
 
 @keyframes img-swap2 {
-    0% {
+    100% {
         background-image: url("./assets/profile1.png");
     }
+}
+
+@keyframes img-swap3 {
     100% {
-        background-image: url("./assets/profile3.png");
+        background-image: url("./assets/profile4.png");
     }
 }
 
@@ -270,4 +269,64 @@ body {
     text-decoration: underline;
     font-size: 15px;
     cursor: default;
+}
+
+
+
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    z-index: 9999;
+    transition: all 2s ease-in;
+}
+
+.loader img {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #494949;
+    animation: loading 2s ease-in-out infinite;
+}
+
+.loader img:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+
+.loader img:nth-of-type(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1) translateX(0px);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2)  translateX(15px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1) translateX(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .loader img {
+        width: 30px;
+    }
+}
+
+.loader.loaded {
+    opacity: 0;
+    visibility: hidden;
 }

@@ -76,7 +76,7 @@ body {
         margin-bottom: 75px;
     }
 
-    .items-ctn img {
+    .items-ctn img, video {
         width: 205px;
         height: 300px;
     }
@@ -95,8 +95,77 @@ body {
         margin-bottom: 75px;
     }
 
-    .items-ctn img {
+    .items-ctn img, video {
         width: 225px;
         height: 350px;
     }
+}
+
+
+
+
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    z-index: 9999;
+    transition: all 2s ease-in;
+}
+
+.loader img {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #494949;
+    animation: loading 2s ease-in-out infinite;
+}
+
+.loader.sketches img {
+    border: 2px solid #FF6636;
+}
+
+.loader.outfits img {
+    border: 2px solid #5F1C07;
+}
+
+.loader img:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+
+.loader img:nth-of-type(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1) translateX(0px);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2)  translateX(15px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1) translateX(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .loader img {
+        width: 30px;
+    }
+}
+
+.loader.loaded {
+    opacity: 0;
+    visibility: hidden;
 }
