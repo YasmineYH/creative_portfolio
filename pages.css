@@ -17,6 +17,27 @@ body {
     position: fixed;
     top: 0;
     right: 5vw;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.page-title a {
+    display: block;
+    margin-top: 12px;
+}
+
+.page-title a svg {
+    width: 40px;
+    height: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-title a svg:hover {
+    transform: scale(1.1) translateY(-1px);
+}
+
+.page-title p {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 18px;
@@ -30,10 +51,9 @@ body {
     background-image: url("./assets/btn-bg-orange.png");
     background-position: 0%;
     background-size: 150%;
-    transition: all 0.3s ease-in;
 }
 
-.page-title.outfits {
+.page-title p.outfits {
     background-image: url("./assets/btn-bg-wine.png");
 }
 
@@ -64,10 +84,6 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-    .page-title {
-        font-size: 15px;
-    }
-
     .items-ctn {
         display: grid;
         grid-template-columns: repeat(auto-fill, 205px);
@@ -84,7 +100,23 @@ body {
 
 @media screen and (max-width: 640px) {
     .page-title {
+        top: 0 !important;
+        gap: 25px;
+        padding: 0;
+    }
+
+    .page-title p {
         font-size: 15px;
+        padding: 15px 40px;
+    }
+
+    .page-title a {
+        margin-top: 6px;
+    }
+
+    .page-title a svg {
+        width: 30px;
+        height: 40px;
     }
 
     .items-ctn {
